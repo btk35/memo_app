@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Memo App</title>
+  </head>
+  <body>
+    <header>
+      <h1>Browzer memo</h1>
+    </header>
+    <main>
+      <div class="container">
+        <p>type message:</p>
+        <div>
+          <input type="text" class="form-control" id="message" />
+          <button class="btn" id="btn">Save</button>
+        </div>
+        <table class="table" id="table"></table>
+        <div>
+          <button class="btn initila" id="initial">
+            Initialize
+          </button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p><small>&copy; 2025 Browzer Memo</small></p>
+    </footer>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
