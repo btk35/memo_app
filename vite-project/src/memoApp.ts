@@ -1,15 +1,23 @@
 export const memoApp = () => {
 
-  let table:HTMLTableElement
-  let message:HTMLInputElement
+  let table:HTMLTableElement | null
+  let message:HTMLInputElement | null
   
   //テーブルに生成内容を表示
   function showTable(html:string) {
+    if(!table){
+      console.error('table要素がない')
+      return;
+    }
     table.innerHTML = html
   }
   
   //フォームの入力
   function doAction() {
+    if(!message){
+      console.error('message要素がまだない')
+      return;
+    }
     const msg = message.value
     if(!msg){
       alert('文字を入力してください')
@@ -23,6 +31,10 @@ export const memoApp = () => {
   
   //フォーム初期化
   function doInitial() {
+    if(!message){
+      console.error('message要素がまだない')
+      return;
+    }
     const confirmDelete = confirm('本当にすべて消しますか？')
     if(!confirmDelete) return;
     memo.data = []
